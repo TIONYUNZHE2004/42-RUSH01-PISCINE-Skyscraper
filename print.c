@@ -1,3 +1,6 @@
+
+#include <unistd.h>
+
 void    printGrid(int **grid, int size)
 {
     int i;
@@ -15,3 +18,4 @@ void    printGrid(int **grid, int size)
         i++;
     }
 }	
+
