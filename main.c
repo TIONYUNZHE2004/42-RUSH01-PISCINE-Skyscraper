@@ -67,17 +67,17 @@ int	main(int argc, char *argv[])
 	n = 0;
 	if (argc != 2 || (check_argument(argv[1])) == 0)
 	{
-		ft_putstr("Invalid Input");
+		ft_putstr("Error");
 		return (1);
 	}
 	n = check_argument(argv[1]);
-	rules = malloc(sizeof(int) * n * n);
-	fill_rules(argv[1], rules, n * n);
+	rules = malloc(sizeof(int) * n * 4);
+	fill_rules(argv[1], rules, n * 4);
 	initialize_array(&grid, n);
 	if (solveskyscraper(grid, rules, n))
 		print_out(grid, n);
 	else
-		ft_putstr("No solution found.\n");
+		ft_putstr("Error");
 	free_memo(grid, n, rules);
 	return (0);
 }
