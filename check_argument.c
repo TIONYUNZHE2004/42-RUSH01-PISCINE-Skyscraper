@@ -39,13 +39,11 @@ int	check_argument(char *argv)
 			space_count++;
 		else
 		{
-			ft_putstr("Invalid input");
 			return (0);
 		}
 		i++;
 	}
 	if (num_count == space_count + 1 && num_count % 4 == 0)
 		return (num_count / 4);
-	ft_putstr("Invalid Input");
 	return (0);
 }
